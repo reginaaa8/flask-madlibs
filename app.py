@@ -14,4 +14,10 @@ def home_page():
     prompts = story.prompts
     return render_template('home.html', prompts=prompts) 
 
+@app.route('/your-story')
+def show_story():
+    '''show madlib'''
+    
+    return render_template('story.html')
+
 
