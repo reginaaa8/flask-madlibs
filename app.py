@@ -6,7 +6,7 @@ from stories import story
 app = Flask(__name__)
 app.config['SECRET_KEY'] = "secret"
 
-debug = DebugToolbarExtension(app)
+# debug = DebugToolbarExtension(app)
 
 @app.route('/')
 def home_page():
@@ -17,7 +17,7 @@ def home_page():
 @app.route('/your-story')
 def show_story():
     '''show madlib'''
-    
-    return render_template('story.html')
+    your_story = story.generate(request.args)
+    return render_template('story.html', your_story=your_story)
 
 

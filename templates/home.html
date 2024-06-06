@@ -10,7 +10,7 @@
     <form action="/your-story">
         {% for prompt in prompts %}
         <label for="{{prompt}}">{{prompt}}</label>
-        <input id="prompt" type="text" name="prompt">
+        <input id="{{prompt}}" type="text" name="{{prompt}}">
         <br>
         {% endfor %}
         <button>Submit</button>
