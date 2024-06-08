@@ -6,7 +6,7 @@ from stories import story
 app = Flask(__name__)
 app.config['SECRET_KEY'] = "secret"
 
-# debug = DebugToolbarExtension(app)
+debug = DebugToolbarExtension(app)
 
 @app.route('/')
 def home_page():
